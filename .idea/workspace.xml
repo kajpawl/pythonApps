@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eba64197-927e-46e2-bc1e-6b49883ca694" name="Default Changelist" comment="Update first app" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hN9gspLtjw7LfgcemobN2tArru" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="program" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01_hello_world" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/program.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eba64197-927e-46e2-bc1e-6b49883ca694" name="Default Changelist" comment="" />
+      <created>1599840796668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599840796668</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update first app">
+      <created>1599841938354</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599841938354</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update first app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update first app" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="525" y="97" key="FileChooserDialogImpl" timestamp="1599859713153">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="525" y="97" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1599859713153" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1599859664987">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841809078" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1599859664987" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1599859664987">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841809078" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1599859664987" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1599859664987">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841809077" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1599859664987" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1599859664987">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841809078" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1599859664987" />
+    <state x="3461" y="165" key="SettingsEditor" timestamp="1599841750155">
+      <screen x="3000" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3461" y="165" key="SettingsEditor/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841750155" />
+    <state x="3086" y="98" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599859665047">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="3086" y="98" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1500.960@0.0.1500.960" timestamp="1599859665047" />
+    <state x="3777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599841917283">
+      <screen x="3000" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841917283" />
+    <state x="3623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599841800585">
+      <screen x="3000" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1599841800585" />
+  </component>
+</project>
