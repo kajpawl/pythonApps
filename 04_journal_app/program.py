@@ -85,4 +85,5 @@ def remove_entry(data):
     print(f'Entry \'{deleted_entry}\' deleted.')
 
 
-main()
+if __name__ == '__main__':
+    main()
