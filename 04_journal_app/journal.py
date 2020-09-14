@@ -1,11 +1,23 @@
+import os
+
+
 def load(name):
     # TODO: add loading from file
     return []
 
 
-def save(name, data):
-    # TODO: add saving to file
-    pass
+def save(name, journal_data):
+    filename = os.path.abspath(os.path.join('.', 'journals', name + '.txt'))
+    # filename = os.path.join('.', 'journals', name + '.txt')
+    print('...saving to: {}'.format(filename))
+
+    # file_out = open(filename, 'w')
+    with open(filename, 'w') as file_out:
+
+        for entry in journal_data:
+            file_out.write(entry + '\n')
+
+    # file_out.close()
 
 
 def add_entry(journal_data, text):
