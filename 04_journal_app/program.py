@@ -1,3 +1,8 @@
+import journal
+# from journal import load, save
+# from journal import *
+
+
 def main():
     print_header()
     run_event_loop()
@@ -13,7 +18,8 @@ def print_header():
 def run_event_loop():
     print('What do you want to do with your journal?')
     cmd = None
-    journal_data = []
+    journal_name = 'default'
+    journal_data = journal.load(journal_name)
 
     while cmd != 'x':
         cmd = input('[L]ist entries, [A]dd an entry, [U]pdate an entry, [R]emove an entry, E[x]it... ')
@@ -33,6 +39,7 @@ def run_event_loop():
         print()
 
     print('Done, goodbye.')
+    journal.save(journal_name, journal_data)
 
 
 def print_entries(data):
@@ -47,7 +54,7 @@ def print_entries(data):
 def add_entry(data):
     new_item = input('Type new entry: ').strip()
     if len(new_item):
-        data.append(new_item)
+        journal.add_entry(data, new_item)
         print('Item \'{}\' added to journal.'.format(new_item))
     else:
         print('Please enter an item.')
@@ -62,7 +69,7 @@ def update_entry(data):
         return print(f'Number out of range: [1 - {len(data)}].')
 
     updated_entry = input('Enter updated task: ')
-    data[updated_number - 1] = updated_entry
+    journal.update_entry(data, updated_number - 1, updated_entry)
     print(f'Entry {updated_number} changed to \'{updated_entry}\'.')
 
 
@@ -74,7 +81,7 @@ def remove_entry(data):
     if deleted_number < 1 or deleted_number > len(data):
         return print(f'Number out of range: [1 - {len(data)}].')
 
-    deleted_entry = data.pop(deleted_number - 1)
+    deleted_entry = journal.delete_entry(data, deleted_number - 1)
     print(f'Entry \'{deleted_entry}\' deleted.')
 
 
