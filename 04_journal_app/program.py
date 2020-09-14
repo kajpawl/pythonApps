@@ -30,6 +30,8 @@ def run_event_loop():
         elif cmd != 'x':
             print('Sorry, we don\'t understand {}'.format(cmd))
 
+        print()
+
     print('Done, goodbye.')
 
 
@@ -48,16 +50,28 @@ def add_entry(data):
 
 
 def update_entry(data):
+    if len(data) == 0:
+        return print('No items to update.')
     updated_number = int(input(f'Which entry do you wish to update? [1 - {len(data)}] '))
+
+    if updated_number < 1 or updated_number > len(data):
+        return print(f'Number out of range: [1 - {len(data)}].')
+
     updated_entry = input('Enter updated task: ')
     data[updated_number - 1] = updated_entry
-    print(f'Entry {updated_number} updated.')
+    print(f'Entry {updated_number} changed to \'{updated_entry}\'.')
 
 
 def remove_entry(data):
+    if len(data) == 0:
+        return print('No items to remove.')
     deleted_number = int(input(f'Which entry do you want to remove? [1 - {len(data)}]  '))
-    data.pop(deleted_number - 1)
-    print(f'Entry {deleted_number} deleted.')
+
+    if deleted_number < 1 or deleted_number > len(data):
+        return print(f'Number out of range: [1 - {len(data)}].')
+
+    deleted_entry = data.pop(deleted_number - 1)
+    print(f'Entry \'{deleted_entry}\' deleted.')
 
 
 main()
