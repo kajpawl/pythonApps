@@ -36,6 +36,7 @@ def run_event_loop():
 
 
 def print_entries(data):
+    # entries = reversed(data)
     if len(data) == 0:
         print('The journal contains no items.')
     else:
@@ -44,9 +45,12 @@ def print_entries(data):
 
 
 def add_entry(data):
-    new_item = input('Type new entry: ')
-    data.append(new_item)
-    print('Item \'{}\' added to journal.'.format(new_item))
+    new_item = input('Type new entry: ').strip()
+    if len(new_item):
+        data.append(new_item)
+        print('Item \'{}\' added to journal.'.format(new_item))
+    else:
+        print('Please enter an item.')
 
 
 def update_entry(data):
