@@ -1,6 +1,9 @@
 import requests
 import bs4
+import collections
 
+WeatherReport = collections.namedtuple('WeatherReport',
+                                       'condition, temperature, location')
 
 def main():
     print_header()
@@ -10,10 +13,9 @@ def main():
 
     html = get_html_from_web(country_code, city)
 
-    get_weather_from_html(html)
-    # get html from web
-    # parse the html
-    # display the forecast
+    report = get_weather_from_html(html)
+
+    print('The temperature for {} is {}, {}.'.format(report.location, report.temperature, report.condition))
 
 
 def print_header():
@@ -35,12 +37,12 @@ def get_weather_from_html(html):
     condition = soup.find(class_='condition-icon').find('p').get_text()
     temperature = soup.find(class_='wu-unit-temperature').get_text()
 
-    location = find_city_and_text_from_location(cleanup_text(location)) + ':'
-    condition = cleanup_text(condition) + ','
+    location = find_city_and_text_from_location(cleanup_text(location))
+    condition = cleanup_text(condition)
     temperature = cleanup_text(temperature)
 
-    print(location, condition, temperature)
-
+    report = WeatherReport(condition=condition, temperature=temperature, location=location)
+    return report
 
 def find_city_and_text_from_location(text: str):
     parts = text.split(' Weather Conditions')
