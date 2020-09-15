@@ -5,6 +5,7 @@ import collections
 WeatherReport = collections.namedtuple('WeatherReport',
                                        'condition, temperature, location')
 
+
 def main():
     print_header()
 
@@ -43,6 +44,7 @@ def get_weather_from_html(html):
 
     report = WeatherReport(condition=condition, temperature=temperature, location=location)
     return report
+
 
 def find_city_and_text_from_location(text: str):
     parts = text.split(' Weather Conditions')
