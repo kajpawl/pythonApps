@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 import cat_service
 
@@ -7,7 +8,7 @@ def main():
     print_header()
     folder = get_or_create_output_folder()
     download_cats(folder)
-    # display cats
+    display_cats(folder)
 
 
 def print_header():
@@ -37,6 +38,13 @@ def download_cats(folder):
         print('Downloading cat ' + name)
         cat_service.get_cat(folder, name)
     print('Done!')
+
+
+def display_cats(folder):
+    # open folder
+    # OS: 'open .' or Windows: 'start .' or Linux: 'xdg-open .'
+    print('Displaying cats in OS window.')
+    subprocess.call(['open', folder])
 
 
 if __name__ == '__main__':
