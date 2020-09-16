@@ -45,9 +45,11 @@ def game_loop():
                 time.sleep(5)
                 print('The wizard return revitalized!')
         elif cmd == 'r':
-            print('run away')
+            print('The wizard has become unsure of his power and flees!!!')
         elif cmd == 'l':
-            print('look around')
+            print('The wizard {} takes in the surroundings and sees:'.format(hero.name))
+            for creature in creatures:
+                print(' * {} of level {}'.format(creature.name, creature.level))
         else:
             print('OK, exiting game...')
             break
