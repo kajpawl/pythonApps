@@ -1,3 +1,4 @@
+import csv
 import os
 
 
@@ -25,15 +26,24 @@ def get_data_file():
 def load_file(filename):
     with open(filename, 'r', encoding='utf-8') as file_in:
         header = file_in.readline()
-        print('found header: ' + header.strip())
+        reader = csv.reader(file_in, delimiter=',')
+        for row in reader:
+            print(type(row), row)
+            beds = row[4]
 
-        lines = []
-        for line in file_in:
-            line_data = line.strip().split(',')
-            bed_count = line_data[4]
-            lines.append(line_data)
 
-        print(lines[:5])
+# def load_file_basic(filename):
+#     with open(filename, 'r', encoding='utf-8') as file_in:
+#         header = file_in.readline()
+#         print('found header: ' + header.strip())
+#
+#         lines = []
+#         for line in file_in:
+#             line_data = line.strip().split(',')
+#             bed_count = line_data[4]
+#             lines.append(line_data)
+#
+#         print(lines[:5])
 
 
 def query_data(data):
