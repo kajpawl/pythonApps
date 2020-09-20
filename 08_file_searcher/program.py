@@ -24,6 +24,11 @@ def main():
         print('match: ' + match.text.strip())
         print()
 
+    # match_count = 0
+    # for m in matches:
+        # match_count += 1
+    # print('Fount {:,} matches.'.format(match_count))
+
 
 def print_header():
     print('-----------------------------------')
