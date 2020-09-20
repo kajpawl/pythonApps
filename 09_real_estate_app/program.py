@@ -25,11 +25,10 @@ def get_data_file():
 
 def load_file(filename):
     with open(filename, 'r', encoding='utf-8') as file_in:
-        header = file_in.readline()
-        reader = csv.reader(file_in, delimiter=',')
+        reader = csv.DictReader(file_in)
         for row in reader:
             print(type(row), row)
-            beds = row[4]
+            print('Bed count: {}'.format(row['beds']))
 
 
 # def load_file_basic(filename):
