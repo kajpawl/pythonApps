@@ -23,10 +23,20 @@ def get_data_file():
 
 
 def load_file(filename):
-    return []
+    with open(filename, 'r', encoding='utf-8') as file_in:
+        header = file_in.readline()
+        print('found header: ' + header.strip())
+
+        lines = []
+        for line in file_in:
+            line_data = line.strip().split(',')
+            bed_count = line_data[4]
+            lines.append(line_data)
+
+        print(lines[:5])
 
 
-def query_data():
+def query_data(data):
     pass
 
 
