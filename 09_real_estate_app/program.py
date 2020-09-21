@@ -14,7 +14,6 @@ def main():
     print_header()
     filename = get_data_file()
     data = load_file(filename)
-    print(data)
     query_data(data)
 
 
@@ -58,13 +57,7 @@ def load_file(filename):
 #         print(lines[:5])
 
 
-# def get_price(p):
-#     return p.price
-
-
 def query_data(data):
-    # if data was sorted by price:
-    # data.sort(key=get_price)
     data.sort(key=lambda p: p.price)
 
     # most expensive house?
@@ -77,31 +70,13 @@ def query_data(data):
     print('The least expensive house is ${:,} with {} beds and {} baths'.format(
         low_purchase.price, low_purchase.beds, low_purchase.baths))
 
-    # average price house?
-    # prices = []
-    # for purchase in data:
-    #     prices.append(purchase.price)
-
     prices = (
-        # (p.price, p.beds, p.city)  # projection or items
         p.price  # projection or items
         for p in data  # the set to process
     )
 
     average_price = statistics.mean(prices)
     print('The average home price is ${:,}'.format(int(average_price)))
-
-    # average price of 2 bedroom houses
-    # prices = []
-    # for purchase in data:
-    #     if purchase.beds == 2:
-    #         prices.append(purchase.price)
-
-    # prices = [
-    #     p.price  # projection or items
-    #     for p in data  # the set to process
-    #     if p.beds == 2  # test/condition
-    # ]
 
     two_bed_homes = (
         p  # projection or items                -> projection
