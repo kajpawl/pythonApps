@@ -82,11 +82,11 @@ def query_data(data):
     # for purchase in data:
     #     prices.append(purchase.price)
 
-    prices = [
+    prices = (
         # (p.price, p.beds, p.city)  # projection or items
         p.price  # projection or items
         for p in data  # the set to process
-    ]
+    )
 
     average_price = statistics.mean(prices)
     print('The average home price is ${:,}'.format(int(average_price)))
@@ -103,16 +103,21 @@ def query_data(data):
     #     if p.beds == 2  # test/condition
     # ]
 
-    two_bed_homes = [
+    two_bed_homes = (
         p  # projection or items                -> projection
         for p in data  # the set to process     -> source
         if p.beds == 2  # test/condition        -> filter
-    ]
+    )
 
-    # average_price = statistics.mean(prices)
-    average_price = statistics.mean([p.price for p in two_bed_homes])
-    average_baths = statistics.mean([p.baths for p in two_bed_homes])
-    average_sq_ft = statistics.mean([p.sq__ft for p in two_bed_homes])
+    homes = []
+    for h in two_bed_homes:
+        if len(homes) > 5:
+            break
+        homes.append(h)
+
+    average_price = statistics.mean((p.price for p in homes))
+    average_baths = statistics.mean((p.baths for p in homes))
+    average_sq_ft = statistics.mean((p.sq__ft for p in homes))
     print('The average price of a 2-bedroom home is ${:,}, baths: {}, sq ft: {}'.format(
         int(average_price), round(average_baths, 1), round(average_sq_ft, 1)))
 
