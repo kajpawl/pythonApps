@@ -51,7 +51,25 @@ def load_file(filename):
 #         print(lines[:5])
 
 
+def get_price(p):
+    return p.price
+
+
 def query_data(data):
+
+    # if data was sorted by price:
+    data.sort(key=get_price)
+
+    # most expensive house?
+    high_purchase = data[-1]
+    print(high_purchase.price)
+
+    # least expensive house?
+    low_purchase = data[0]
+    print(low_purchase.price)
+
+    # average price house?
+    # average price of 2 bedroom houses
     pass
 
 
