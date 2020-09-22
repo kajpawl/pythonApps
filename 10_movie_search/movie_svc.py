@@ -19,4 +19,6 @@ def find_movies(search_text):
         for md in movies_list
     ]
 
+    movies.sort(key=lambda m: -m.year)
+
     return movies
