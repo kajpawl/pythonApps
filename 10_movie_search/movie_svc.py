@@ -6,6 +6,9 @@ MovieResult = collections.namedtuple('MovieResult',
 
 
 def find_movies(search_text):
+    if not search_text or not search_text.strip():
+        raise ValueError('Error: Search text is required!')
+
     url = 'http://movieservice.talkpython.fm/api/search/{}'.format(search_text)
 
     resp = requests.get(url)
