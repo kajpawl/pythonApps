@@ -46,10 +46,15 @@ def get_movies(search_text):
     #     )
     #     movies.append(m)
 
-    movies = []
-    for md in movies_list:
-        m = MovieResult(**md)
-        movies.append(m)
+    # movies = []
+    # for md in movies_list:
+    #     m = MovieResult(**md)
+    #     movies.append(m)
+
+    movies = [
+        MovieResult(**md)
+        for md in movies_list
+    ]
 
     print('Found {} movies for search {}.'.format(len(movies), search_text))
     for m in movies:
